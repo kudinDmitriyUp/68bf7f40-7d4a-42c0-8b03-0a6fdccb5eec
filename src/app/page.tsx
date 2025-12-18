@@ -16,7 +16,7 @@ import { Phone, Mail } from "lucide-react";
 export default function LandingPage() {
   return (
     <ThemeProvider
-      defaultButtonVariant="elastic-effect"
+      defaultButtonVariant="text-stagger"
       defaultTextAnimation="entrance-slide"
       borderRadius="pill"
       contentWidth="small"
@@ -270,10 +270,6 @@ export default function LandingPage() {
           ctaDescription="Let our team help you plan your perfect jungle escape and customize your stay."
           ctaButton={{ text: "Contact Us", href: "mailto:reservations@casakaan.com" }}
           ctaIcon={Phone}
-          contactInfo={[
-            { icon: Phone, label: "Phone", value: "+52 (XXX) XXX-XXXX" },
-            { icon: Mail, label: "Email", value: "reservations@casakaan.com" }
-          ]}
           faqs={[
             {
               id: "1",
@@ -294,6 +290,18 @@ export default function LandingPage() {
           useInvertedBackground="noInvert"
           animationType="slide-up"
         />
+        <div className="mt-8 text-center">
+          <div className="flex flex-col items-center space-y-4">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-5 h-5" />
+              <span className="text-lg">Phone: +52 (XXX) XXX-XXXX</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Mail className="w-5 h-5" />
+              <span className="text-lg">Email: reservations@casakaan.com</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="footer" data-section="footer">

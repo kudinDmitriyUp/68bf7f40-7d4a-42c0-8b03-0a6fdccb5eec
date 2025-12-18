@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleCentered from '@/components/navbar/NavbarStyleCentered/NavbarStyleCentered';
@@ -11,7 +11,7 @@ import TestimonialCardEight from '@/components/sections/testimonial/TestimonialC
 import FaqSplitText from '@/components/sections/faq/FaqSplitText';
 import ContactFaq from '@/components/sections/contact/ContactFaq';
 import FooterLogoReveal from '@/components/sections/footer/FooterLogoReveal';
-import { Phone } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -270,6 +270,10 @@ export default function LandingPage() {
           ctaDescription="Let our team help you plan your perfect jungle escape and customize your stay."
           ctaButton={{ text: "Contact Us", href: "mailto:reservations@casakaan.com" }}
           ctaIcon={Phone}
+          contactInfo={[
+            { icon: Phone, label: "Phone", value: "+52 (XXX) XXX-XXXX" },
+            { icon: Mail, label: "Email", value: "reservations@casakaan.com" }
+          ]}
           faqs={[
             {
               id: "1",
